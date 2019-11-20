@@ -21,16 +21,7 @@ class Triangle
   def sides
     [equilateral, isosceles, scalene]
   end
-  
-  def errors
-    if sides.any? { |side| side <= 0 } or sides[0] + sides[1] <= sides[2]
-      begin 
-        raise TriangleError
-      rescue TriangleError
-      end
-    end
-  end
-  
+
   class TriangleError < StandardError
     def message
       "Invalid Triangle"
