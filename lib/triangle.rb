@@ -24,7 +24,7 @@ class Triangle
   end
   
   def sides
-    [equilateral, isosceles, scalene]
+    [equilateral, isosceles, scalene].sort
   end
 
   class TriangleError < StandardError
