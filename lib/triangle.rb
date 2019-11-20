@@ -39,5 +39,3 @@ class Triangle
   end
   
 end
-
-Triangle.new(0, 0, 0).kind
