@@ -11,7 +11,6 @@ class Triangle
   def kind
     
     if (sides.any? { |side| side <= 0 } or sides[0] + sides[1] <= sides[2])
-      puts 'invalid now watch it raise'
       raise TriangleError, 'Invalid Triangle'
     else
       case sides.uniq.size
