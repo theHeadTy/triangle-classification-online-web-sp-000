@@ -6,10 +6,10 @@ class Triangle
     @equilateral = eq
     @isosceles = is
     @scalene = sc
-    errors
   end
 
   def kind
+    errors
     case sides.uniq.size
       when 1 then :equilateral
       when 2 then :isosceles
