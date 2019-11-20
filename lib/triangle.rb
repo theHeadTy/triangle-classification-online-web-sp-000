@@ -26,8 +26,7 @@ class Triangle
     if sides.any? { |side| side <= 0 } or sides[0] + sides[1] <= sides[2]
       begin 
         raise TriangleError
-      rescue TriangleError => err
-        err.message
+      rescue TriangleError
       end
     end
   end
