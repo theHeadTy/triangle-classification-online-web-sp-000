@@ -1,4 +1,9 @@
+class TriangleError < StandardError
+end
+
 class Triangle
+  
+  TriangleError = Class.new(TriangleError)
   
   attr_accessor :equilateral, :isosceles, :scalene
 
@@ -23,14 +28,8 @@ class Triangle
     
   end
   
+  private
   def sides
     [equilateral, isosceles, scalene].sort
   end
-
-  class TriangleError < StandardError
-    def message
-      "Invalid Triangle"
-    end
-  end
-  
 end
